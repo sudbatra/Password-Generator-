@@ -54,7 +54,7 @@ function generatePassword() {
   }
 
   // variable for special charracters 
-  var specialCharactersConfirm = window.confirm("Would you like to include Special Vharacters in your password?");
+  var specialCharactersConfirm = window.confirm("Would you like to include Special Characters in your password?");
   if(specialCharactersConfirm === true) {
     for(i=0; i<specialCharacters.length; i++) {
       validInput.push(specialCharacters[i]);
