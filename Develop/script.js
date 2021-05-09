@@ -73,7 +73,7 @@ function generatePassword() {
     validInput[Math.floor(Math.random()*validInput.length)];
     passwordGenerated += validInput[Math.floor(Math.random()*validInput.length)];
   }
-  return pG;
+  return passwordGenerated;
   console.log(pG);
 }
 
