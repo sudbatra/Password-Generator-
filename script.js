@@ -5,7 +5,9 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  if(!password) {
+    return
+  }
   passwordText.value = password;
 
 }
@@ -66,12 +68,14 @@ function generatePassword() {
   }
 
   // added a else statement, if user does not select any variable mentioned above, user gets an underfined error
-    
-  else{
+  
+  
+  else if(lowerCaseConfirm == false && upperCaseConfirm == false && numberCaseConfirm == false && specialCharactersConfirm == false) {
     var invalidChoice = window.alert("Please choose atleast one Character Field!");
-    return invalidChoice;
+    return;
   } 
   
+
   // this variable generates password
   var passwordGenerated = "";
   for(i=0; i<confirmLength; i++) {
@@ -79,7 +83,7 @@ function generatePassword() {
     passwordGenerated += validInput[Math.floor(Math.random()*validInput.length)];
   }
   return passwordGenerated;
-  console.log(pG);
+  console.log(passwordGenerated);
 }
 
 // Write password to the #password input
