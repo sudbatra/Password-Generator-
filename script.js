@@ -34,6 +34,7 @@ function generatePassword() {
   if(lowerCaseConfirm === true) {
     for(i=0; i<lowerCaseCharacters.length; i++) {
       validInput.push(lowerCaseCharacters[i]);
+      console.log(lowerCaseCharacters[i]);
     }
   }
 
@@ -42,6 +43,7 @@ function generatePassword() {
   if(upperCaseConfirm === true) {
     for(i=0; i<upperCaseCharacters.length; i++) {
       validInput.push(upperCaseCharacters[i]);
+      console.log(upperCaseCharacters[i]);
     }
   }
 
@@ -50,6 +52,7 @@ function generatePassword() {
   if(numberCaseConfirm === true) {
     for(i=0; i<numberCharacters.length; i++) {
       validInput.push(numberCharacters[i]);
+      console.log(numberCharacters[i]);
     }
   }
 
@@ -58,16 +61,17 @@ function generatePassword() {
   if(specialCharactersConfirm === true) {
     for(i=0; i<specialCharacters.length; i++) {
       validInput.push(specialCharacters[i]);
+      console.log(specialCharacters[i]);
     }
   }
 
   // added a else statement, if user does not select any variable mentioned above, user gets an underfined error
-  /*  
+    
   else{
     var invalidChoice = window.alert("Please choose atleast one Character Field!");
     return invalidChoice;
   } 
-  */
+  
   // this variable generates password
   var passwordGenerated = "";
   for(i=0; i<confirmLength; i++) {
