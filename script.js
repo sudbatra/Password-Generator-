@@ -62,11 +62,12 @@ function generatePassword() {
   }
 
   // added a else statement, if user does not select any variable mentioned above, user gets an underfined error
+  /*  
   else{
     var invalidChoice = window.alert("Please choose atleast one Character Field!");
     return invalidChoice;
-  }
-
+  } 
+  */
   // this variable generates password
   var passwordGenerated = "";
   for(i=0; i<confirmLength; i++) {
